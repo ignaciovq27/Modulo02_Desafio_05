@@ -15,23 +15,36 @@
 
 <body>
     <div class="container d-grid gap-2 form-group">
-
-        <h2 class="text-center mt-4">· To do List
+        <h2 class="text-center mt-4">
+            · To do List
             <i class="fa-solid fa-book text-primary fa-bounce" style="--fa-animation-duration: 1.5s;"></i> ·
         </h2>
         <hr class="my-0 mb-3">
         <div class="mx-auto row col-md-8">
+            <div class="d-flex justify-content-left align-items-center m-0 p-0">
+                <div class="spinner-grow text-primary m-0 me-2" style="width: 0.4rem; height: 0.4rem;" role="status">
+                </div>
+                <h3 class="align-left m-0 p-0">Nueva tarea:</h3>
+            </div>
             <form id="formulario" class="mx-auto col-xs-12 gap-3 w-100 d-inline-flex m-2 row">
-                <h3 class="align-middle m-0 p-0">Nueva tarea:</h3>
-                <input id="input" type="text" placeholder="Ingresa una nueva tarea" class="form-control p-3 my-0"
-                    autofocus>
+
+                <div class="d-flex justify-content-center align-items-center m-0 p-0">
+                    <!-- <div class="spinner-grow spinner-grow-sm text-primary m-0 me-2" role="status"></div> -->
+                    <input id="input" type="text" placeholder="Ingresa una nueva tarea " class="form-control p-3 my-0"
+                        autofocus>
+                    <!-- <div class="spinner-grow spinner-grow-sm text-primary m-0 ms-2" role="status"></div> -->
+                </div>
+
                 <button class="d-grid gap-3 p-3 mx-auto btn  btn-primary shadow-sm m-2 w-50 btn-lg"
                     type="submit">Agregar</button>
             </form>
         </div>
+        <hr class="m-0 p-0 mt-3">
         <div class="d-flex justify-content-between align-items-end">
-            <div>
-                <h3 class="pt-3 my-0">Lista de tareas: </h3>
+            <div class="d-flex justify-content-left align-items-center m-0 p-0">
+                <div class="spinner-grow text-primary m-0 me-2" style="width: 0.4rem; height: 0.4rem;" role="status">
+                </div>
+                <h3 class="align-left m-0 p-0">Lista de tareas: </h3>
             </div>
             <div>
                 <h4 class="pt-3 my-0 text-right ">Total:
@@ -43,14 +56,23 @@
                 </h4>
             </div>
         </div>
-        <div>
-            <div class="d-flex justify-content-start align-items-end">
-                <h5 class="pt-3 my-0 ms-3 me-5 text-primary" style="width: 85px;">ID</h5>
-                <h5 class="pt-3 my-0 ms-5 d-inline-flex ms-4 text-primary">TAREA</h5>
-            </div>
-            <div id="lista-tareas" class="my-2">
 
+        <div class="form-group d-flex justify-content-between align-items-end">
+            <div class="m-0 d-flex justify-content-between">
+                <h5 class="pt-3 my-0 ms-3 me-5 text-primary">ID</h5>
+                <h5 class="pt-3 my-0 ms-5 ms-4 me-2 text-primary">TAREA</h5>
             </div>
+            <div class="form-group m-0 p-0">
+                <div class="form-check m-0 me-2 p-0 px-3 d-flex align-items-center" id="divFiltro">
+                    <input class="form-check-input m-0 mx-1" type="checkbox" id="gridCheck" role="button">
+                    <label class="form-check-label m-0" for="gridCheck" role="button">
+                        <h5 class="m-0 mx-1 text-primary" id="idLabel">FILTRAR TAREAS COMPLETADAS
+                        </h5>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div id="lista-tareas" class="my-2">
         </div>
 
 
